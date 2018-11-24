@@ -1,0 +1,21 @@
+{% if results|length %}
+	<table class="table table-striped">
+	<tr>
+		<td colspan=3>
+		<strong>Found {{ results|length }} players</strong>
+		</td>
+	</tr>
+		<td><strong>Movie</strong></td>
+	</tr>
+	{% for r in results %}
+	<tr>
+		<td>{{ r.film }}</td>
+
+	</tr>
+	{% endfor %}
+	</table>
+{% else %}
+	<div class="note">
+	Your search yielded no results
+	</div>
+{% endif %}
