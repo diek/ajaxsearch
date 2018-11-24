@@ -1,26 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
 <div class="form-signin">
     <h3 class="form-signin-heading">Movies</h3>
-	<input id="q" type="text" placeholder="Search film" />
-    <br/>
+    <input id="q" type="text" placeholder="Search film" />
+    <br />
     <div class="margin">
         <div id="results"></div>
     </div>
 </div>
 {% endblock %}
-
 {% block extra_js %}
-
 <script type="text/javascript">
-    $( document ).ready( function() {
-        $( '#q' ).keyup( function() {
-            q = $( '#q' ).val();
-            $( '#results' ).html( '&nbsp;' ).load( '{% url search %}?q=' + q );
-        });
-    });
+  $(document).ready(function() {
+      $('#q').keyup(function() {
+        q = $('#q').val();
+        $('#results').html('&nbsp;').load('{% url 'search' %}?q=' + q);
+      });
+  });
 </script>
-
 {% endblock %}

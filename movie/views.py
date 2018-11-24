@@ -11,7 +11,6 @@ def index(request):
 
 # search view
 def search(request):
-    print("searching")
     if request.is_ajax():
         q = request.GET.get("q")
         if q is not None:
