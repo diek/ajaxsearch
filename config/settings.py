@@ -56,7 +56,7 @@ TEMPLATES = [
     }
 ]
 
-WSGI_APPLICATION = "ajaxsearch.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 DATABASES = {
